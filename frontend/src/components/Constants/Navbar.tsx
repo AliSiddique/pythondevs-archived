@@ -53,10 +53,10 @@ export default function Navbar() {
                     Dashboard
                   </Link>
                   <Link
-                    href="#"
+                    href="/public/pricing"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
                   >
-                    Team
+                    Pricing
                   </Link>
                   <Link
                     href="#"
@@ -65,10 +65,10 @@ export default function Navbar() {
                     Projects
                   </Link>
                   <Link
-                    href="#"
+                    href="/user/login"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
                   >
-                    Calendar
+                    Login
                   </Link>
                 </div>
               </div>
