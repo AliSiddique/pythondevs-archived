@@ -1,5 +1,3 @@
-
-
 from pathlib import Path
 
 import environ
@@ -11,6 +9,8 @@ env = environ.Env(
 )
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
@@ -137,6 +137,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Static files (CSS, JavaScript, Images)

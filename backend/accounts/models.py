@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+import uuid
 class Profile(models.Model):
     role_options = (
         ("Junior", "Junior"),
@@ -20,6 +20,7 @@ class Profile(models.Model):
         ("Internship", "Internship"),
         ("Apprenticeship", "Apprenticeship"),
     )
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_employer = models.BooleanField(default=False)
     profile_picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True)
